@@ -1,0 +1,3 @@
+recursive-include file_sharing/templates *
+recursive-include file_sharing/templatetags *
+recursive-include file_sharing/media *

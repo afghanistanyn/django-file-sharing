@@ -1,0 +1,29 @@
+{% extends "base/file_sharing.html"%}
+{% load file_tags %}
+
+{% block content %}
+<table class="table">
+	<thead>
+		<th>#</th>
+		<th>Name</th>
+	</thead>
+{% for f in folders %}
+	<tr>
+		<td><i class="icon-folder-close"></i></td>
+		<td>
+			<a href="{{f.get_absolute_url}}">{{f.name}}</a>
+		</td>
+	</tr>
+{% endfor %}
+
+{% for f in files %}
+	<tr>
+		<td><i class="{{f.file_type|get_icon}}"></i></td>
+		<td>
+			{{f.name}}
+		</td>
+	</tr>
+{% endfor %}
+
+</table>
+{% endblock content %}

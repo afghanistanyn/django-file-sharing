@@ -14,9 +14,10 @@ function createUploader(){
 		if(responseJSON.success)
 		{
 			$('#file-uploader').hide();
-            $('.uploaded-image').html('<img src="/media/pin/temp/t/'+responseJSON.file+'">');
+            /*$('.uploaded-image').html('<img src="/media/pin/temp/t/'+responseJSON.file+'">');
 			$('#image_field').val(responseJSON.file);
-			image_selected=1;
+			image_selected=1;*/
+            window.location.reload();
 		}else{
 			alert('Error');
         }

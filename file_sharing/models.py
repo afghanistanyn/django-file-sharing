@@ -8,6 +8,11 @@ from mptt.models import MPTTModel
 
 DEFAULT_FOLDERS = ['Music', 'Picture', 'Images', 'Documents']
 
+class UserData(models.Model):
+    storage_size = models.IntegerField(default=1*1024*1024*1024)
+    storage_usage = models.IntegerField(default=0)
+    user = models.ForeignKey(User)
+
 class Folders(MPTTModel):    
     name = models.CharField(max_length=250)
     parent = TreeForeignKey('self', null=True, blank=True, related_name='children')

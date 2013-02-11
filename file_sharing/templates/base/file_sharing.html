@@ -8,21 +8,28 @@
 		<script type="text/javascript" src="/media/js/fileuploader.js"></script>
 		
 		<link rel="stylesheet" type="text/css" href="/media/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/uploader.css" />
 	</head>
 
-	<body>
+	<body style="padding:5px">
 <script type="text/javascript">
 var folder = {{folder}};
 var upload_url = '{% url upload%}';
 </script>
-		<div class="row-fluid">
+		<div class="container row-fluid">
 			<div class="span2">
-				<ul>
+				<ul class="nav nav-tabs nav-stacked">
+                    <li><a href="{% url home %}">Files</a></li>
 					<li><a href="#1">Files</a></li>
 				</ul>
+                <div class="progress">
+                    <div class="bar" style="width: {{storage}}%">
+                    {{storage}}%
+                    </div>
+                </div>
 			</div>
 			
-			<div class="span4">
+			<div class="span10">
 				<div id="upload-pos">
 					<div id="file-uploader"> </div>
 					

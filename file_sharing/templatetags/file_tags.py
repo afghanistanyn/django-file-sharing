@@ -8,4 +8,6 @@ def get_icon(mime):
         return 'icon-picture'
     elif mime.startswith('text'):
         return 'icon-file'
+    elif mime.startswith('video'):
+        return 'icon-film'
     

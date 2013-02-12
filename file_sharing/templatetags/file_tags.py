@@ -10,4 +10,5 @@ def get_icon(mime):
         return 'icon-file'
     elif mime.startswith('video'):
         return 'icon-film'
-    
+    elif mime.startswith('audio'):
+        return 'icon-music'   

@@ -3,7 +3,7 @@ from setuptools import find_packages
 from distutils.core import setup
 
 
-version = '0.1'
+version = '0.2.0'
 
 setup(
     name = "django-file-sharing",
